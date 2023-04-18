@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+.mvn/wrapper 
+.vscode/settings.json
+.vscode/tasks.json

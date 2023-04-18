@@ -1,14 +1,13 @@
-package sales.score.sales;
+package br.com.api.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SalesApplication {
+public class ClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SalesApplication.class, args);
-		System.out.println("Hello World");
+		SpringApplication.run(ClientApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package sales.score.sales;
+package br.com.api.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SalesApplicationTests {
+class ClientApplicationTests {
 
 	@Test
 	void contextLoads() {
