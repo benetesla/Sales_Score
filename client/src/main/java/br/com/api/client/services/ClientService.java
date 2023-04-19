@@ -18,8 +18,7 @@ public class ClientService {
 
     public Iterable<ClientModel> listarTodos() {
         return clientRepositorio.findAll();
-    }
-   
+    }   
     //metodo para salvar cliente
     public ResponseEntity<?> cadastra(ClientModel md){
         if(md.getName().equals("") || md.getName() == null){
@@ -32,7 +31,6 @@ public class ClientService {
             clientRepositorio.save(md);
             rm.setMensagem("Cliente cadastrado com sucesso");
             return ResponseEntity.ok(rm);
-        }
-    
+        }    
     }    
 }
