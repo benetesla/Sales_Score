@@ -16,9 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ClientController {
     @Autowired
     private ClientService clientService;
+    
     @PostMapping("/cadastrar")
     public ResponseEntity<?> cadastrar(@RequestBody ClientModel client){
-        return clientService.cadastra(client);
+        return clientService.cadastra(client, "cadastrar");
     }
     @GetMapping("/client")
     public Iterable<ClientModel> listarTodos(){

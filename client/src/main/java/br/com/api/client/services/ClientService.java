@@ -20,7 +20,7 @@ public class ClientService {
         return clientRepositorio.findAll();
     }   
     //metodo para salvar cliente
-    public ResponseEntity<?> cadastra(ClientModel md){
+    public ResponseEntity<?> cadastra(ClientModel md, String acao){
         if(md.getName().equals("") || md.getName() == null){
             rm.setMensagem("Nome não pode ser vazio");
             return ResponseEntity.badRequest().body(rm);
@@ -28,9 +28,14 @@ public class ClientService {
             rm.setMensagem("Marca não pode ser vazio");
             return ResponseEntity.badRequest().body(rm);
         }else{
-            clientRepositorio.save(md);
-            rm.setMensagem("Cliente cadastrado com sucesso");
-            return ResponseEntity.ok(rm);
+           if(acao.equals("cadastrar")){
+                clientRepositorio.save(md);
+                rm.setMensagem("Cliente cadastrado com sucesso");
+                return ResponseEntity.ok().body(rm);
+            }else{
+                rm.setMensagem("Ação não encontrada");
+                return ResponseEntity.badRequest().body(rm);
+            }
         }    
     }    
 }
