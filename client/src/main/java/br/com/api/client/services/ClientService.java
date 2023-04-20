@@ -32,10 +32,32 @@ public class ClientService {
                 clientRepositorio.save(md);
                 rm.setMensagem("Cliente cadastrado com sucesso");
                 return ResponseEntity.ok().body(rm);
-            }else{
+            }else if(acao.equals("atualizar")){
+                clientRepositorio.save(md);
+                rm.setMensagem("Cliente editado com sucesso");
+                return ResponseEntity.ok().body(rm);
+            
+            }else if(acao.equals("remover")){
+                clientRepositorio.delete(md);
+                rm.setMensagem("Cliente removido com sucesso");
+                return ResponseEntity.ok().body(rm);
+            }            
+            else{
                 rm.setMensagem("Ação não encontrada");
                 return ResponseEntity.badRequest().body(rm);
             }
         }    
-    }    
+    }
+
+    //remover cliente
+        public ResponseEntity<ResModel> remover(Long id){
+            if(clientRepositorio.existsById(id)){
+                clientRepositorio.deleteById(id);
+                rm.setMensagem("Cliente removido com sucesso");
+                return ResponseEntity.ok().body(rm);
+            }else{
+                rm.setMensagem("Cliente não encontrado");
+                return ResponseEntity.badRequest().body(rm);
+            }
+        }
 }
