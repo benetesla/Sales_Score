@@ -85,3 +85,26 @@
     }
     
 }
+
+@media screen and (max-width: 768px){
+    .home{
+        padding-top: 0;
+        height: 60vh;
+    }
+    .home__title{
+        font-size: 2rem;
+    }
+    .home__description{
+        font-size: 1rem;
+    }
+    .home__buttons{
+        flex-direction: column;
+        margin-bottom: 15rem;
+        .home__buttons__container{
+            flex-direction: column;
+            .home__buttons__container__button{
+                font-size: 1rem;
+            }
+        }
+    }
+}
