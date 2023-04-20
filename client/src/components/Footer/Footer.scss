@@ -1,0 +1,37 @@
+$color-primary: #b99393;
+$color-secondary: #f5eeee;
+.footer{
+    color: $color-secondary;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: $color-primary;
+    .footer__container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+       p {
+           margin: 0 10px;
+       }
+        a {
+           color: $color-secondary;
+           text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+       }  
+       i {
+           margin: 0 10px;
+           &:hover {
+               text-decoration: underline;
+              }
+       }  
+    }
+}
