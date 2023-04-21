@@ -36,10 +36,6 @@ public class ClientController {
     }
     @GetMapping("/client")
     public Iterable<ClientModel> listarTodos(){
-        return clientService.listarTodos();
-    }   
-    @GetMapping ("/")
-    public String rota(){
-        return "Api de clientes rodando";    
+        return clientService.listsarTodos();
     }
 }
