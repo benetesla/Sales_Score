@@ -36,6 +36,6 @@ public class ClientController {
     }
     @GetMapping("/client")
     public Iterable<ClientModel> listarTodos(){
-        return clientService.listsarTodos();
+        return clientService.listarTodos();
     }
 }

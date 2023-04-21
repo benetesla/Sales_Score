@@ -9,8 +9,7 @@ $color-secondary: #f5eeee;
     position: fixed;
     bottom: 0;
     left: 0;    
-    width: 100%;
-    z-index: 100;
+    width:100%;
     background-color: $color-primary;
     .footer__container{
         display: flex;
@@ -35,3 +34,18 @@ $color-secondary: #f5eeee;
        }  
     }
 }
+
+@media screen and (max-width: 768px) {
+    .footer{
+        font-size: 1rem;
+        position: relative;
+        top: 8rem;
+        .footer__container{
+            flex-direction: column;
+            p {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+    
