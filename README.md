@@ -18,12 +18,12 @@ Sistema de gerenciamento de clientes, usando JPA e Spring.
 *Os caminhos da api ainda se encontra em construção*
 
 ```http
-  GET /api/items
+  http://localhost:3000/clients
 ```
 
 | Parâmetro  | Tipo       | Descrição |
 | :---------- | :--------- | :---------- |
-| `api_key` | `string` |             |
+| `"/listarTodos"` | `string` |       Retorna todos os clientes do database      |
 
 #### Cadastro de usuario
 
