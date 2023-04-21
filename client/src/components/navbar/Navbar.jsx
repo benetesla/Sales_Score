@@ -19,11 +19,15 @@ const Navbar = () => {
                         Gerenciamento de clientes
                     </a>
                     <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a className="dropdown-item" href='/clients'>Listar clientes</a></li>
-                        <li><a className="dropdown-item" href="#">Novo cliente</a></li>
-                        <li><a className="dropdown-item" href="#">Atualizar cliente</a></li>
-                        <li><a className="dropdown-item" href="#">Deletar cliente</a></li>
-                    </ul>
+                        <li><a className="dropdown-item" href='/clients'>
+                            <i className="fas fa-user-circle"></i>
+                            <span>Clientes</span>
+                            </a></li>
+                        <li><a className="dropdown-item" href="#">
+                            <i className="fas fa-user-plus"></i>
+                            <span>Novo cliente</span>
+                            </a></li>
+                      </ul>
                 </li>
             </ul>
         </div>

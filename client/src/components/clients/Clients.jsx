@@ -33,8 +33,12 @@ const Clients = () => {
                         <div className="card-body">
                             <h5 className="card-title">{client.name}</h5>
                             <p className="card-text">{client.marca}</p>
-                            <button className="btn btn-danger">Delete</button>
-                            <button className="btn btn-warning">Update</button>
+                            <button className="btn btn-danger">
+                                <i className="fas fa-trash-alt"></i>
+                            </button>
+                            <button className="btn btn-warning">
+                                <i className="fas fa-edit"></i>
+                            </button>
                         </div>
                     </div>
                 ))}
